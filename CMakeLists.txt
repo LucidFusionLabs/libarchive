@@ -32,9 +32,6 @@ IF(NOT "${CMAKE_BUILD_TYPE}"
 ENDIF(NOT "${CMAKE_BUILD_TYPE}"
           MATCHES "^(Debug|Release|RelWithDebInfo|MinSizeRel)\$")
 
-# On MacOS, prefer MacPorts libraries to system libraries.
-# I haven't come up with a compelling argument for this to be conditional.
-list(APPEND CMAKE_PREFIX_PATH /opt/local)
 # Enable @rpath in the install name.
 # detail in "cmake  --help-policy CMP0042"
 SET(CMAKE_MACOSX_RPATH ON)
